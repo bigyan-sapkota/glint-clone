@@ -7,8 +7,93 @@
 }
 
 :root {
-    --font-family: 'Poppins', sans-serif;
     --secondary-color: #39b44d;
+    --font-family: 'Poppins', sans-serif;
 }
 
+.hero{
+    height: 130vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/leaves.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo {
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: 500;
+    padding: 1.5rem;
+}
+
+.logo span{
+    font-size: 36px;
+    margin-left: 1.5px;
+    color: var(--secondary-color);
+}
+
+.menu{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: #0c0c0c;
+    width: 15rem;
+    height: 100vh;
+}
+
+.menu ul{
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    list-style-type: none;
+}
+
+.mobile-nav-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 11rem;
+}
+
+.mobile-nav-top .nav-text{
+    color: var(--secondary-color);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.mobile-nav-top img{
+    background-color: #080808;
+    width: 25px;
+    height: 25px;
+    padding: 7px;
+}
+
+.navbar-items {
+    margin-top: 2.3rem;
+}
+
+.navbar-items li{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar-foot{
+    margin-top: 2.3rem;
+}
+
+.navbar-foot p{
+    color: #494943;
+    font-size: 12px;
+    width: 180px;
+}
