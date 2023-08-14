@@ -65,12 +65,65 @@
         <div class="about__content">
             <span>HELLO THERE</span>
             <h1>We Are Glint</h1>
+            <div class="hr1"><div class="under"></div></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
         </div>
 
-        <div class="progress">
-
-        </div>
+        <div id="content_numbers"></div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
+<!-- 
+    const contentNumbers = document.getElementById("content_numbers");
+
+const progress = [
+  {
+    number: Math.floor(Math.random() * 899) + 100,
+    tag: "Award Received",
+  },
+  {
+    number: Math.floor(Math.random() * 8999) + 1000,
+    tag: "Cup of Coffee",
+  },
+  {
+    number: Math.floor(Math.random() * 899) + 100,
+    tag: "Projects Completed",
+  },
+  {
+    number: Math.floor(Math.random() * 899) + 100,
+    tag: "Happy Clients",
+  },
+];
+
+const incrementNumber = (numberElement, finalNumber, currentNumber = 0) => {
+  if (currentNumber <= finalNumber) {
+    numberElement.innerText = currentNumber;
+    setTimeout(() => {
+      incrementNumber(numberElement, finalNumber, currentNumber + 1);
+    }, 10); // Adjust the delay here
+  }
+};
+
+const generateHTML = () => {
+  const contentHTML = progress.map(
+    (items) => `
+    <div class="progress">
+        <h1 class="number">0</h1>
+        <p class="tag">${items.tag}</p>
+        <div class="hr1"><div class="under"></div></div>
+    </div>
+    `
+  );
+  contentNumbers.innerHTML = contentHTML.join("");
+
+  const numberElements = document.querySelectorAll(".number");
+  numberElements.forEach((numberElement, index) => {
+    const finalNumber = progress[index].number;
+    incrementNumber(numberElement, finalNumber);
+  });
+};
+
+generateHTML();
+ -->
