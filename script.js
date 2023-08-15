@@ -1,4 +1,15 @@
 const contentNumbers = document.getElementById("content_numbers");
+const menu_hamburger = document.querySelector(".hamburger");
+
+
+// Making menu_hamburger background black while scrolling:
+window.addEventListener('scroll', () => {
+  if(window.scrollY>menu_hamburger.offsetHeight + 150){
+    menu_hamburger.classList.add('active');
+  }else{
+    menu_hamburger.classList.remove('active');
+  }
+})
 
 const progress = [
   {
@@ -18,6 +29,39 @@ const progress = [
     tag: "Happy Clients",
   },
 ];
+
+const services = [
+  {
+    img:"",
+    title:"Brand Identity", 
+    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+  },
+  {
+    img:"",
+    title:"", 
+    text:"",
+  },
+  {
+    img:"",
+    title:"", 
+    text:"",
+  },
+  {
+    img:"",
+    title:"", 
+    text:"",
+  },
+  {
+    img:"",
+    title:"", 
+    text:"",
+  },
+  {
+    img:"",
+    title:"", 
+    text:"",
+  },
+]
 
 
 const generateHTML = () => {
