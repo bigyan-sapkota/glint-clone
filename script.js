@@ -30,7 +30,7 @@ const progress = [
   },
 ];
 
-const services = [
+const servicesDetails = [
   {
     img:"",
     title:"Brand Identity", 
@@ -64,16 +64,28 @@ const services = [
 ]
 
 
-const generateHTML = () => {
-  const contentHTML = progress.map(
-    (items) => `
+const generateHTMLForAbout = () => {
+  const contentHTMLForAbout = progress.map(
+    (progressItems) => `
     <div class="progress">
-        <h1 class="number">${items.number}</h1>
-        <p class="tag">${items.tag}</p>
+        <h1 class="number">${progressItems.number}</h1>
+        <p class="tag">${progressItems.tag}</p>
     </div>
     `
   );
-  contentNumbers.innerHTML = contentHTML.join("");
+  contentNumbers.innerHTML = contentHTMLForAbout.join("");
 };
 
-generateHTML();
+generateHTMLForAbout();
+
+
+// For services section
+const generateHTMLForService = () => {
+  const contentHTMLForService = servicesDetails.map(
+    (serviceItems) => `
+    
+    `
+  )
+};
+
+generateHTMLForService();

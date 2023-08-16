@@ -71,59 +71,10 @@
 
         <div id="content_numbers"></div>
     </div>
+    
+    <div id="services">
+      
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
-
-<!-- 
-    const contentNumbers = document.getElementById("content_numbers");
-
-const progress = [
-  {
-    number: Math.floor(Math.random() * 899) + 100,
-    tag: "Award Received",
-  },
-  {
-    number: Math.floor(Math.random() * 8999) + 1000,
-    tag: "Cup of Coffee",
-  },
-  {
-    number: Math.floor(Math.random() * 899) + 100,
-    tag: "Projects Completed",
-  },
-  {
-    number: Math.floor(Math.random() * 899) + 100,
-    tag: "Happy Clients",
-  },
-];
-
-const incrementNumber = (numberElement, finalNumber, currentNumber = 0) => {
-  if (currentNumber <= finalNumber) {
-    numberElement.innerText = currentNumber;
-    setTimeout(() => {
-      incrementNumber(numberElement, finalNumber, currentNumber + 1);
-    }, 10); // Adjust the delay here
-  }
-};
-
-const generateHTML = () => {
-  const contentHTML = progress.map(
-    (items) => `
-    <div class="progress">
-        <h1 class="number">0</h1>
-        <p class="tag">${items.tag}</p>
-        <div class="hr1"><div class="under"></div></div>
-    </div>
-    `
-  );
-  contentNumbers.innerHTML = contentHTML.join("");
-
-  const numberElements = document.querySelectorAll(".number");
-  numberElements.forEach((numberElement, index) => {
-    const finalNumber = progress[index].number;
-    incrementNumber(numberElement, finalNumber);
-  });
-};
-
-generateHTML();
- -->
