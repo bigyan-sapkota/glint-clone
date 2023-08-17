@@ -1,4 +1,5 @@
 const contentNumbers = document.getElementById("content_numbers");
+const contentServices = document.getElementById("service_content");
 const menu_hamburger = document.querySelector(".hamburger");
 
 
@@ -32,34 +33,34 @@ const progress = [
 
 const servicesDetails = [
   {
-    img:"",
+    img:"paintbrush.png",
     title:"Brand Identity", 
     text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"",
-    title:"", 
-    text:"",
+    img:"3d.png",
+    title:"Illustration", 
+    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"",
-    title:"", 
-    text:"",
+    img:"megaphone.png",
+    title:"Marketing", 
+    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"",
-    title:"", 
-    text:"",
+    img:"planet-earth.png",
+    title:"Web Design", 
+    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"",
-    title:"", 
-    text:"",
+    img:"3d-cube.png",
+    title:"Packaging Design", 
+    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"",
-    title:"", 
-    text:"",
+    img:"suitcase.png",
+    title:"Web Development", 
+    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
 ]
 
@@ -83,9 +84,18 @@ generateHTMLForAbout();
 const generateHTMLForService = () => {
   const contentHTMLForService = servicesDetails.map(
     (serviceItems) => `
-    
+      <div  class="services_list">
+        <div class="services_list__items">
+          <div class="services_image"><img src="./assets/${serviceItems.img}" alt="${serviceItems.title}"></div>
+          <div class="services_content">
+            <div class="services_content__title">${serviceItems.title}</div>
+            <div class="services_content__text">${serviceItems.text}</div>
+          </div>
+        </div>
+      </div>
     `
-  )
+  );
+  contentServices.innerHTML = contentHTMLForService.join('');
 };
 
 generateHTMLForService();

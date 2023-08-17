@@ -29,9 +29,9 @@
 }
 
 .hamburger{
-    padding: 8px;
-    height: 34px;
-    width: 100px;
+    padding: 15px;
+    height: 45px;
+    width: 110px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -286,14 +286,14 @@
     margin-top: 64px;
     margin-bottom: 36px;
     height: 700px;
-    padding-inline: 40px;
+    padding-inline: 70px;
 }
 
 .progress{
     border-bottom: 1px solid #aaa;
     text-align: center;
     font-family: var(--font-family);
-    padding-bottom: 50px;
+    padding-bottom: 45px;
 }
 
 .progress .number{
@@ -305,4 +305,73 @@
 .progress .tag{
     font-weight: 700;
     margin-top: -1rem;
+}
+
+/* SERVICES SECTION---------------------------------------------- */
+
+.services_top{
+    margin-top: 5.5rem;
+    padding: 2rem;
+}
+
+.services_top h1,h4{
+    font-family: var(--font-family);
+    width: 100%;
+    text-align: center;
+}
+
+.services_top h4{
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+}
+
+.services_top h1{
+    font-weight: 600;
+    width: 420px;
+}
+
+.hr2{
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hr2 .hr2_hr{
+    background: rgb(199, 199, 199);
+    height: 1px;
+    width: 50%;
+}
+
+.services_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.services_list__items{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 50px;
+
+}
+
+.services_image{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services_content{
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+.services_content__title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.services_content__text{
+    width: 400px;
+    color: grey;
 }
