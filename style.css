@@ -373,5 +373,47 @@
 
 .services_content__text{
     width: 400px;
-    color: grey;
+    color: #757575;
+}
+
+/* WORKS SECTION --------------------------------------------------------------------------------------------- */
+#works{
+    height: 100vh;
+    background-color: #111111;
+}
+
+.works_content{
+    padding-top: 6rem;
+    padding-inline: 25px;
+}
+
+.works_content h1,h4{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+.works_content h4{
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.works_content h1{
+    color: #fff;
+    font-weight: 600;
+}
+
+.hr3{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.hr3_hr{
+    width: 60%;
+    height: 0.5px;
+    background-color: #1d1d1d;
+
 }
