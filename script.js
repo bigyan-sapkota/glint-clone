@@ -1,6 +1,7 @@
 const contentNumbers = document.getElementById("content_numbers");
 const contentServices = document.getElementById("service_content");
 const menu_hamburger = document.querySelector(".hamburger");
+const images = document.querySelector(".images")
 
 
 // Making menu_hamburger background black while scrolling:
@@ -64,7 +65,40 @@ const servicesDetails = [
   },
 ]
 
+const imageDetails = [
+  {
+    img: "lady-shutterbug.jpg.webp",
+    title:"SHUTTERBUG",
+    tag:"Branding"
+  },
+  {
+    img: "woodcraft.jpg.webp",
+    title:"WOODCRAFT",
+    tag:"Web Design"
+  },
+  {
+    img: "the-beetle.jpg.webp",
+    title:"THE BETTLE",
+    tag:"Web Development"
+  },
+  {
+    img: "grow-green.jpg.webp",
+    title:"GROW GREEN",
+    tag:"Branding"
+  },
+  {
+    img: "guitarist.jpg.webp",
+    title:"GUITARIST",
+    tag:"Web Design"
+  },
+  {
+    img: "palmeira.jpg.webp",
+    title:"PALMEIRA",
+    tag:"Web Design"
+  },
+]
 
+// For About Section
 const generateHTMLForAbout = () => {
   const contentHTMLForAbout = progress.map(
     (progressItems) => `
@@ -76,7 +110,6 @@ const generateHTMLForAbout = () => {
   );
   contentNumbers.innerHTML = contentHTMLForAbout.join("");
 };
-
 generateHTMLForAbout();
 
 
@@ -97,5 +130,42 @@ const generateHTMLForService = () => {
   );
   contentServices.innerHTML = contentHTMLForService.join('');
 };
-
 generateHTMLForService();
+
+// For images section
+const generateHTMLForImages = () =>{
+  const contentHTMLForImages = imageDetails.map(
+    (imageItems, index) => 
+    index <= 2 ? `
+    <div class="col1">
+      <div class="col-img">
+          <div class="images-img"><img src="./assets/${imageItems.img}" alt=""></div>
+          <div class="overlay">
+              <div class="link"><img src="./assets/link.png" alt=""></div>
+              <div class="plus"><img src="./assets/plus.svg" alt=""></div>
+              <div class="image-hover-text">
+                  <h5>${imageItems.title}</h5>
+                  <p>${imageItems.tag}</p>
+              </div>
+          </div>
+      </div>
+   </div>
+    `: `
+    <div class="col2">
+      <div class="col-img">
+        <div class="images-img"><img src="./assets/${imageItems.img}" alt=""></div>
+          <div class="overlay">
+              <div class="link"><img src="./assets/link.png" alt=""></div>
+              <div class="plus"><img src="./assets/plus.svg" alt=""></div>
+              <div class="image-hover-text">
+                  <h5>${imageItems.title}</h5>
+                  <p>${imageItems.tag}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+    `
+  );
+  images.innerHTML = contentHTMLForImages.join('');
+};
+generateHTMLForImages();
