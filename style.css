@@ -430,6 +430,7 @@
     height: 100%;
     margin-top: -4px;
     position: relative;
+    overflow: hidden;
 }
 
 .overlay{
@@ -447,9 +448,12 @@
     z-index: -1;
 }
 
+.col-img:hover{
+    cursor: pointer;
+}
+
 .col-img:hover .overlay{
     background-color: rgba(0, 0, 0, 0.6);
-    cursor: pointer;
     z-index: 1;
 }
 
@@ -457,6 +461,11 @@
 .images img{
     height: 100%;
     width: 100%;
+    transition: 1s ease;
+}
+
+.images img:hover{
+    transform: scale(1.1);
 }
 
 .link{
@@ -500,4 +509,10 @@
 .image-hover-text p{
     font-family: var(--font-family);
     color: rgb(199, 199, 199);
+}
+
+/* OUR CLIENTS SECTION ------------------------------------------------------------ */
+
+#clients{
+    background-color: #e6e6e6;
 }

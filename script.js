@@ -2,6 +2,7 @@ const contentNumbers = document.getElementById("content_numbers");
 const contentServices = document.getElementById("service_content");
 const menu_hamburger = document.querySelector(".hamburger");
 const images = document.querySelector(".images")
+const client = document.querySelector(".our_clients")
 
 
 // Making menu_hamburger background black while scrolling:
@@ -98,6 +99,27 @@ const imageDetails = [
   },
 ]
 
+const userReviewOfClients = [
+  {
+    img:"user-01.jpg",
+    text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium aperiam exercitationem alias earum reprehenderit saepe nobis quo aut, laboriosam suscipit. Vero, dolores. Ipsum dicta aut, voluptas quae doloribus sapiente harum magnam ipsa, vitae laudantium repellendus expedita magni accusamus adipisci at veniam nisi. Odio, et alias quam impedit similique dignissimos?",
+    name:"Tim Cook",
+    position:"CEO, Apple",
+  },
+  {
+    img:"user-02.jpg",
+    text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, minus! A adipisci ad autem dolorum incidunt rem dolore. Mollitia expedita magnam saepe omnis voluptatibus dolore culpa quo est ea exercitationem voluptates, perspiciatis sit soluta eveniet autem eos repellat corporis vel!",
+    name:"Sundar Pichai",
+    position:"CEO, Google",
+  },
+  {
+    img:"user-05.jpg",
+    text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi ad minima magni sit facilis. Laboriosam asperiores voluptatibus ipsa corrupti quidem ducimus labore, consequuntur soluta sint inventore illum expedita incidunt quia, modi hic atque unde voluptates.",
+    name:"Satya Nadella",
+    position:"CEO Microsoft",
+  }
+]
+
 // For About Section
 const generateHTMLForAbout = () => {
   const contentHTMLForAbout = progress.map(
@@ -169,3 +191,16 @@ const generateHTMLForImages = () =>{
   images.innerHTML = contentHTMLForImages.join('');
 };
 generateHTMLForImages();
+
+// User review section 
+const generateHTMLForClientsUserReview = () => {
+  const contentHTMLForClientsUserReview = userReviewOfClients.map(
+    (clients,index) => `
+      <div class="client" id="client${index+1}">
+
+      </div>
+    `
+  );
+  client.innerHTML = contentHTMLForClientsUserReview.join('');
+};
+generateHTMLForClientsUserReview();
