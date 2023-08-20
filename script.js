@@ -2,8 +2,7 @@ const contentNumbers = document.getElementById("content_numbers");
 const contentServices = document.getElementById("service_content");
 const menu_hamburger = document.querySelector(".hamburger");
 const images = document.querySelector(".images")
-const client = document.querySelector(".our_clients")
-
+const clients = document.querySelector(".slider-track")
 
 // Making menu_hamburger background black while scrolling:
 window.addEventListener('scroll', () => {
@@ -101,19 +100,19 @@ const imageDetails = [
 
 const userReviewOfClients = [
   {
-    img:"user-01.jpg",
+    img:"user-01.webp",
     text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium aperiam exercitationem alias earum reprehenderit saepe nobis quo aut, laboriosam suscipit. Vero, dolores. Ipsum dicta aut, voluptas quae doloribus sapiente harum magnam ipsa, vitae laudantium repellendus expedita magni accusamus adipisci at veniam nisi. Odio, et alias quam impedit similique dignissimos?",
     name:"Tim Cook",
     position:"CEO, Apple",
   },
   {
-    img:"user-02.jpg",
+    img:"user-02.webp",
     text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, minus! A adipisci ad autem dolorum incidunt rem dolore. Mollitia expedita magnam saepe omnis voluptatibus dolore culpa quo est ea exercitationem voluptates, perspiciatis sit soluta eveniet autem eos repellat corporis vel!",
     name:"Sundar Pichai",
     position:"CEO, Google",
   },
   {
-    img:"user-05.jpg",
+    img:"user-03.webp",
     text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi ad minima magni sit facilis. Laboriosam asperiores voluptatibus ipsa corrupti quidem ducimus labore, consequuntur soluta sint inventore illum expedita incidunt quia, modi hic atque unde voluptates.",
     name:"Satya Nadella",
     position:"CEO Microsoft",
@@ -195,12 +194,39 @@ generateHTMLForImages();
 // User review section 
 const generateHTMLForClientsUserReview = () => {
   const contentHTMLForClientsUserReview = userReviewOfClients.map(
-    (clients,index) => `
-      <div class="client" id="client${index+1}">
-
+    (clients) => `
+      <div class="slider-slide">
+        <p>${clients.text}</p>
+        <div class="profile">
+          <img src="./assets/${clients.img}" alt="${clients.name}">
+          <h5>${clients.name}</h5>
+          <small>${clients.position}</small>
+        </div>
       </div>
     `
   );
-  client.innerHTML = contentHTMLForClientsUserReview.join('');
+  clients.innerHTML = contentHTMLForClientsUserReview.join('');
 };
 generateHTMLForClientsUserReview();
+
+// Applying slider function
+let currentSlide = 0;
+
+function changeSlide(slideIndex) {
+  const sliderTrack = document.querySelector('.slider-track');
+  const slideWidth = document.querySelector('.slider-slide').offsetWidth;
+  console.log(".slicer-track", sliderTrack, ".slider-slide", slideWidth)
+  
+  const buttons = document.querySelectorAll('.slider-button');
+  buttons.forEach(button => button.classList.remove('active'));
+
+  // Add 'active' class to the clicked button
+  const clickedButton = buttons[slideIndex];
+  clickedButton.classList.add('active');
+
+  currentSlide = slideIndex;
+  const displacement = -slideWidth * currentSlide;
+  sliderTrack.style.transform = `translateX(${displacement}px)`;
+}
+
+

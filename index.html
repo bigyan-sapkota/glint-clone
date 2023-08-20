@@ -91,13 +91,35 @@
 
     <div class="images"></div>
 
-    <div id="clients">
-        <div class="our_clients">
-            <div class="client" id="client1">Client 1</div>
-            <div class="client" id="client2">Client 2</div>
-            <div class="client" id="client3">Client 3</div>
-        </div>          
-    </div>    
+    <div id="our-clients">
+        <div class="clients__slider">
+            <div class="slider-track"></div>
+        </div>
+        <div class="client__slider-buttons">
+            <div class="slider__buttons">
+                <button class="slider-button active" onclick="changeSlide(0)"></button>
+                <button class="slider-button" onclick="changeSlide(1)"></button>
+                <button class="slider-button" onclick="changeSlide(2)"></button>
+            </div>
+        </div>    
+    </div>
+    
+    <div id="contact">
+        <div class="form__contact-details">
+            <div class="contact__form">
+                <p>SEND US MESSAGE</p>
+                <form action="">
+                    <div class="form_container">
+                        <div><input type="text" placeholder="Your Name" class="border-bottom-input"></div>
+                        <div><input type="text" placeholder="Your Email" class="border-bottom-input"></div>
+                        <div><input type="text" placeholder="Subject" class="border-bottom-input"></div>
+                        <div><textarea placeholder="Your Message" cols="30" rows="10"></textarea></div>
+                    </div>
+                </form>
+            </div>
+            <div class="contact__details"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
