@@ -631,7 +631,7 @@
     flex-direction: column;
     align-items: center;
     padding: 100px 30px 50px 30px;
-    background-color: #151515;
+    background-color: rgba(128, 128, 128, 0.283);
 }
 
 .contact__heading p{
@@ -655,8 +655,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 75px 25px;
+    background-color: rgba(128, 128, 128, 0.211);
+    padding: 75px 25px 0 25px;
 }
 
 .contact__form p{
@@ -664,17 +664,12 @@
     font-weight: 500;
     color: #fff;
     font-size: 13px;
-}
-
-.contact__form p{
-    font-family: var(--font-family);
-    font-size: 14px;
     letter-spacing: 1px;
 }
 
 form{
     width: 100%;
-    padding-block: 25px;
+    padding-top: 25px;
 }
 
 .form_container{
@@ -685,9 +680,10 @@ form{
     width: 100%;
 }
 
-.form_container div input{
+.form_container .input_box input{
     background-color: transparent;
-    border: none;
+    border:none;
+    border-bottom: 1px solid #808075;
     color: #fff;
     font-family: var(--font-family);
     outline: none;
@@ -696,13 +692,13 @@ form{
     font-size: 14px;
 }
 
-.form_container div input:focus{
+.form_container .input_box input:focus{
     border-bottom: 1px solid green;
 }
 
 input::placeholder,
 textarea::placeholder{
-    color:#b5b1b1;
+    color:#808075;
     font-size: 14px;
     font-family: var(--font-family);
 }
@@ -714,6 +710,7 @@ form textarea{
     background-color: transparent;
     color: #fff;
     font-size: 14px;
+    border-bottom: 1px solid #808075;
 }
 
 textarea:focus{
@@ -724,4 +721,49 @@ textarea:focus{
     overflow: hidden;
 }
 
+.form__btn{
+    display: flex;
+    justify-content: center;
+}
+
+.form__btn input{
+    padding: 15px 160px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    font-family: var(--font-family);
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+
+.form__btn input:hover{
+    background-color: #319e44;
+    cursor: pointer;
+}
+
+.contact__details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+    background-color: rgba(128, 128, 128, 0.211);
+    text-align: center;
+}
+
+.contact__details .contact_item{
+    margin-bottom: 3rem;
+}
+
+.contact_item h4{
+    margin-bottom: 0.6rem;
+    color: var(--secondary-color);
+}
+
+.contact_item p{
+    margin-bottom: 0.5rem;
+    color:#808075;
+}
 /* Contact Details------------------------------------------- */
