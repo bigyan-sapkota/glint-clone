@@ -1,8 +1,9 @@
 const contentNumbers = document.getElementById("content_numbers");
 const contentServices = document.getElementById("service_content");
 const menu_hamburger = document.querySelector(".hamburger");
-const images = document.querySelector(".images")
-const clients = document.querySelector(".slider-track")
+const images = document.querySelector(".images");
+const clients = document.querySelector(".slider-track");
+const contact = document.querySelector(".contact__details")
 
 // Making menu_hamburger background black while scrolling:
 window.addEventListener('scroll', () => {
@@ -119,6 +120,27 @@ const userReviewOfClients = [
   }
 ]
 
+const contactDetails =[
+  {
+    heading: "Where to Find Us",
+    detail1: "1600 Amphitheatre Parkway",
+    detail2: "Mountain View, CA",
+    detail3: "94043 US",
+  },
+  {
+    heading: "Email Us At",
+    detail1: "contact@glintsite.com",
+    detail2: "info@glintsite.com",
+    detail3: "bigyan@gmail.com",
+  },
+  {
+    heading: "Call Us At",
+    detail1: "Phone: (+63) 555 1212",
+    detail2: "Mobile: (+63) 555 0100",
+    detail3: "Fax: (+63) 555 0101",
+  },
+]
+
 // For About Section
 const generateHTMLForAbout = () => {
   const contentHTMLForAbout = progress.map(
@@ -229,4 +251,18 @@ function changeSlide(slideIndex) {
   sliderTrack.style.transform = `translateX(${displacement}px)`;
 }
 
-
+// Content for contacts
+const generateHTMLForContact = () => {
+  const contentHTMLForContact = contactDetails.map(
+    (contactItems) => `
+      <div class="contact_item">
+        <h4>${contactItems.heading}</h4>
+        <p>${contactItems.detail1}</p>
+        <p>${contactItems.detail2}</p>
+        <p>${contactItems.detail3}</p>
+      </div>
+    `
+  );
+   contact.innerHTML = contentHTMLForContact.join('');
+}
+generateHTMLForContact();

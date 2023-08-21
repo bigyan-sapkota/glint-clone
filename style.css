@@ -607,14 +607,121 @@
 #contact{
     margin-top: 100px;
     background: url('assets/contact.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
-.form__contact-details{
+
+.contact_line{
+    position: absolute;
+    top: -1%;
+    left: 50%;
+}
+
+.green_line{
+    margin-top: -70px;
+    height: 140px;
+    width: 2px;
+    background-color: var(--secondary-color);
+}
+
+.contact__heading{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 100px 30px 50px 30px;
+    background-color: #151515;
+}
+
+.contact__heading p{
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+    font-weight: 600; 
+    font-size: 16px;  
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.contact__heading h1{
+    font-family: var(--font-family);
+    color: #fff;
+    font-weight: 550; 
+    text-align: center;
+    line-height: 40px;
 }
 
 .contact__form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 75px 25px;
 }
+
+.contact__form p{
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: #fff;
+    font-size: 13px;
+}
+
+.contact__form p{
+    font-family: var(--font-family);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+form{
+    width: 100%;
+    padding-block: 25px;
+}
+
+.form_container{
+    padding: 25px;
+}
+
+.input_box{
+    width: 100%;
+}
+
+.form_container div input{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: var(--font-family);
+    outline: none;
+    width: 100%;
+    padding: 20px 20px 20px 0;
+    font-size: 14px;
+}
+
+.form_container div input:focus{
+    border-bottom: 1px solid green;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#b5b1b1;
+    font-size: 14px;
+    font-family: var(--font-family);
+}
+
+form textarea{
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+}
+
+textarea:focus{
+    border-bottom: 1px solid green;
+}
+
+.text_area{
+    overflow: hidden;
+}
+
+/* Contact Details------------------------------------------- */
