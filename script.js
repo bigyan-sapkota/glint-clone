@@ -1,18 +1,33 @@
 const contentNumbers = document.getElementById("content_numbers");
 const contentServices = document.getElementById("service_content");
 const menu_hamburger = document.querySelector(".hamburger");
+const menuForMobile = document.querySelector(".menu");
+const menu_cross = document.querySelector(".mobile-nav-top img");
 const images = document.querySelector(".images");
 const clients = document.querySelector(".slider-track");
-const contact = document.querySelector(".contact__details")
+const contact = document.querySelector(".contact__details");
+
+
 
 // Making menu_hamburger background black while scrolling:
 window.addEventListener('scroll', () => {
-  if(window.scrollY>menu_hamburger.offsetHeight + 150){
+  if(window.scrollY>menu_hamburger.offsetHeight + 50){
     menu_hamburger.classList.add('active');
   }else{
     menu_hamburger.classList.remove('active');
   }
 })
+
+// Making menu_hamburger toggle the menu bar
+menu_hamburger.addEventListener('click', () => {
+  menuForMobile.classList.add('activeMenu');
+  menu_hamburger.style.display = 'none';
+});
+
+menu_cross.addEventListener('click', () => {
+  menuForMobile.classList.remove('activeMenu');
+  menu_hamburger.style.display = 'flex';
+});
 
 const progress = [
   {
@@ -64,7 +79,7 @@ const servicesDetails = [
     title:"Web Development", 
     text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
-]
+];
 
 const imageDetails = [
   {
@@ -97,7 +112,7 @@ const imageDetails = [
     title:"PALMEIRA",
     tag:"Web Design"
   },
-]
+];
 
 const userReviewOfClients = [
   {
@@ -118,7 +133,7 @@ const userReviewOfClients = [
     name:"Satya Nadella",
     position:"CEO Microsoft",
   }
-]
+];
 
 const contactDetails =[
   {
@@ -139,7 +154,7 @@ const contactDetails =[
     detail2: "Mobile: (+63) 555 0100",
     detail3: "Fax: (+63) 555 0101",
   },
-]
+];
 
 // For About Section
 const generateHTMLForAbout = () => {
