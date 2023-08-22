@@ -696,7 +696,7 @@ form{
     border-bottom: 1px solid green;
 }
 
-input::placeholder,
+#contact input::placeholder,
 textarea::placeholder{
     color:#808075;
     font-size: 14px;
@@ -766,4 +766,97 @@ textarea:focus{
     margin-bottom: 0.5rem;
     color:#808075;
 }
-/* Contact Details------------------------------------------- */
+/* FOOTER SECTION------------------------------------------------------------------------------------*/
+#footer{
+    background-color: #111111;
+    padding: 75px 35px 0 35px;
+}
+
+.footer__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__top h1{
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.footer__top p,
+.footer__center p{
+    color: #46544d;
+    font-size: 14px;
+    font-family: var(--font-family);
+}
+
+.footer__center h3{
+    margin-block: 25px;
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__form-item input{
+    padding: 15px 130px;
+}
+
+.footer__form-item input{
+    outline: none;
+    border: none;
+    background-color: #0f0f0f;
+    color: #fff;
+    caret-color: white;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.footer__form-item input::placeholder{
+    text-align: center;
+    color: #333c3f;
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+.footer__submit-button input{
+    padding: 15px 185px;
+    color: white;
+    background-color: var(--secondary-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.footer__bottom{
+    padding: 100px 25px;
+}
+
+.footer__bottom p{
+    text-align: center;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: #46544d;
+    font-weight: 250;
+    letter-spacing: 0.5px;
+}
+
+.footer__bottom span{
+    color: white;
+    font-weight: 300;
+}
