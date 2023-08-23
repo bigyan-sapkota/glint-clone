@@ -454,10 +454,9 @@ html{
 
 /* WORKS SECTION --------------------------------------------------------------------------------------------- */
 #works{
-    height: 100vh;
+    height: 90vh;
     padding-inline: 25px;
     background-color: #111111;
-    margin-bottom: -600px;
 }
 
 .works_content{
@@ -499,6 +498,7 @@ html{
 
 .images{
     padding-inline: 25px;
+    margin-top: -40vh;
 }
 
 .col-img{
