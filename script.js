@@ -6,7 +6,8 @@ const menu_cross = document.querySelector(".mobile-nav-top img");
 const images = document.querySelector(".images");
 const clients = document.querySelector(".slider-track");
 const contact = document.querySelector(".contact__details");
-
+const weAreGlintInAbout = document.querySelector(".about__content h1");
+const scrollToTop = document.querySelector(".go-to-top");
 
 
 // Making menu_hamburger background black while scrolling:
@@ -15,6 +16,12 @@ window.addEventListener('scroll', () => {
     menu_hamburger.classList.add('active');
   }else{
     menu_hamburger.classList.remove('active');
+  }
+
+  if(window.scrollY>weAreGlintInAbout.offsetHeight + 500){
+    scrollToTop.style.display = 'block';
+  }else if(window.scrollY<weAreGlintInAbout.offsetHeight + 550){
+    scrollToTop.style.display = 'none';
   }
 })
 
