@@ -88,7 +88,7 @@ html{
     bottom: 0;
     right: 0;
     width: 200px;
-    height: 200px;
+    height: 130px;
     margin-top: 30px;
 }
 
@@ -246,10 +246,7 @@ html{
 .content{
     color: white;
     height: 500px;
-}
-
-.content{
-    margin-top: 10rem;
+    margin-top: 2rem;
 }
 
 .description h3{
@@ -276,7 +273,7 @@ html{
 .btn{
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 .btn button{
@@ -301,7 +298,7 @@ html{
 #about{
     background-color: #39b54a;
     padding-block: 20%;
-    padding-inline: 10%;
+    padding-inline: 25px;
 }
 
 .about{
@@ -366,29 +363,38 @@ html{
     text-align: center;
     font-family: var(--font-family);
     padding-bottom: 45px;
+    width: 200px;
 }
 
 .progress .number{
     font-size: 5rem;
     font-weight: 700;
     color: white;
+    width: 100%;
+    text-align: center;
 }
 
 .progress .tag{
+    text-align: center;
     font-weight: 700;
     margin-top: -1rem;
+    width: 100%;
+    text-align: center;
 }
 
 /* SERVICES SECTION---------------------------------------------- */
 
+#services{
+    padding-inline: 25px;
+    padding-bottom: 5.5rem;
+}
+
 .services_top{
     margin-top: 5.5rem;
-    padding: 2rem;
 }
 
 .services_top h1,h4{
     font-family: var(--font-family);
-    width: 100%;
     text-align: center;
 }
 
@@ -399,11 +405,10 @@ html{
 
 .services_top h1{
     font-weight: 600;
-    width: 420px;
 }
 
 .hr2{
-    margin-top: -20px;
+    margin-top: 14px;
     display: flex;
     justify-content: center;
 }
@@ -423,8 +428,7 @@ html{
 .services_list__items{
     display: flex;
     flex-direction: column;
-    padding: 25px 50px;
-
+    margin-top: 3.5rem;
 }
 
 .services_image{
@@ -444,19 +448,19 @@ html{
 }
 
 .services_content__text{
-    width: 400px;
+
     color: #757575;
 }
 
 /* WORKS SECTION --------------------------------------------------------------------------------------------- */
 #works{
     height: 100vh;
+    padding-inline: 25px;
     background-color: #111111;
 }
 
 .works_content{
     padding-top: 6rem;
-    padding-inline: 25px;
 }
 
 .works_content h1,h4{
@@ -494,7 +498,7 @@ html{
 
 .images{
     padding-inline: 25px;
-    margin-top: -250px;
+    margin-top: -350px;
 }
 
 .col-img{
@@ -797,7 +801,7 @@ textarea:focus{
 }
 
 .form__btn input{
-    padding: 15px 160px;
+    padding: 15px 140px;
     margin-top: 40px;
     margin-bottom: 50px;
     text-transform: uppercase;
@@ -878,11 +882,16 @@ textarea:focus{
     align-items: center;
 }
 
-.footer__form-item input{
-    padding: 15px 130px;
+.email__subscribe{
+    padding-inline: 10px;
+}
+
+.email__subscribe form{
+    width: 100%;
 }
 
 .footer__form-item input{
+    padding: 15px 80px;
     outline: none;
     border: none;
     background-color: #0f0f0f;
@@ -900,7 +909,7 @@ textarea:focus{
 }
 
 .footer__submit-button input{
-    padding: 15px 185px;
+    padding: 15px 135px;
     color: white;
     background-color: var(--secondary-color);
     outline: none;
