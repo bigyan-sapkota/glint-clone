@@ -589,12 +589,44 @@ html{
 
 #our-clients{
     background-color: #e6e6e6;
-    padding-bottom: 100px;
     margin-inline: 25px;
     margin-top: -10px;
+    padding-block: 100px;
+    padding-inline: 25px;
+}
+
+.clients_top p{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+    text-align: center;
+    padding-bottom: 7px;
+}
+
+.clients_top h1{
+    font-size: 25px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.hr4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hr4_hr{
+    margin-top: 10px;
+    width: 400px;
+    height: 1.5px;
+    background-color: #c0bdbd;
 }
 
 .clients__slider{
+    margin-top: -50px;
     width: 100%;
     overflow: hidden;
 }
@@ -607,17 +639,25 @@ html{
 .slider-slide{
     flex-shrink: 0;
     width: 100%;
-    padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.slider-slide p{
+.slider-slide:first-child{
+    margin-top: 3.5rem;
+}
+
+.slider_text{
+    margin-top: 3.2rem;
+    width: 100%;
+}
+
+.slider-slide .slider_text p{
     font-family: var(--font-family);
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     color: #555555;
 }
 
@@ -648,6 +688,7 @@ html{
 }
 
 .client__slider-buttons{
+    margin-top: 15px;
     display: flex;
     justify-content: center;
 
@@ -687,13 +728,10 @@ html{
     position: relative;
 }
 
-.contact_line{
-    position: absolute;
-    top: -1%;
-    left: 50%;
-}
-
 .green_line{
+    position: absolute;
+    top: 0%;
+    left: 50%;
     margin-top: -70px;
     height: 140px;
     width: 2px;

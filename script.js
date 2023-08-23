@@ -240,7 +240,7 @@ const generateHTMLForClientsUserReview = () => {
   const contentHTMLForClientsUserReview = userReviewOfClients.map(
     (clients) => `
       <div class="slider-slide">
-        <p>${clients.text}</p>
+        <div class="slider_text"><p>${clients.text}</p></div>
         <div class="profile">
           <img src="./assets/${clients.img}" alt="${clients.name}">
           <h5>${clients.name}</h5>
