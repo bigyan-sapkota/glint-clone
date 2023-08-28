@@ -8,6 +8,7 @@ const clients = document.querySelector(".slider-track");
 const contact = document.querySelector(".contact__details");
 const weAreGlintInAbout = document.querySelector(".about__content h1");
 const scrollToTop = document.querySelector(".go-to-top");
+const menu_links = document.querySelector(".navbar-items li");
 
 
 // Making menu_hamburger background black while scrolling:
@@ -35,6 +36,12 @@ menu_cross.addEventListener('click', () => {
   menuForMobile.classList.remove('activeMenu');
   menu_hamburger.style.display = 'flex';
 });
+
+menu_links.addEventListener('click', () => {
+  menuForMobile.classList.remove('activeMenu');
+  menu_hamburger.style.display = 'flex';
+});
+
 
 const progress = [
   {
