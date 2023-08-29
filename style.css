@@ -163,6 +163,7 @@ html {
   height: 0;
   width: 15rem;
   z-index: 999;
+  padding: 10px 5px;
 }
 
 .menu.activeMenu {
@@ -593,7 +594,6 @@ html {
 
 #our-clients {
   background-color: #e6e6e6;
-  margin-inline: 25px;
   margin-top: -10px;
   padding-block: 100px;
   padding-inline: 25px;
@@ -601,7 +601,7 @@ html {
 
 .clients_top p {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   font-family: var(--font-family);
   color: var(--secondary-color);
@@ -625,7 +625,7 @@ html {
 .hr4_hr {
   margin-top: 10px;
   width: 400px;
-  height: 1.5px;
+  height: 1px;
   background-color: #c0bdbd;
 }
 
@@ -728,6 +728,7 @@ html {
   background-size: cover;
   background-position: center;
   position: relative;
+  padding-inline: 25px;
 }
 
 .green_line {
@@ -755,6 +756,7 @@ html {
   font-size: 16px;
   letter-spacing: 1.5px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .contact__heading h1 {
@@ -762,7 +764,7 @@ html {
   color: #fff;
   font-weight: 550;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 .contact__form {
@@ -781,7 +783,7 @@ html {
   letter-spacing: 1px;
 }
 
-form {
+.contact__form form {
   width: 100%;
   padding-top: 25px;
 }
@@ -817,7 +819,7 @@ textarea::placeholder {
   font-family: var(--font-family);
 }
 
-form textarea {
+.contact__form form textarea {
   margin-top: 20px;
   outline: none;
   border: none;
@@ -903,6 +905,7 @@ textarea:focus {
 .footer__center p {
   color: #46544d;
   font-size: 14px;
+  text-align: center;
   font-family: var(--font-family);
 }
 
@@ -993,7 +996,7 @@ textarea:focus {
 @media screen and (max-width: 300px) {
   .menu-bar_scroll {
     top: 25px;
-    right: 50px;
+    right: 5px;
   }
 
   .menu-bar {
@@ -1001,12 +1004,13 @@ textarea:focus {
   }
 
   .hamburger {
-    width: 100px;
+    width: 90px;
+    height: 35px;
   }
 
   .lines {
     height: 14px;
-    width: 15px;
+    width: 10px;
   }
 
   .line {
@@ -1022,6 +1026,10 @@ textarea:focus {
   .hero .logo {
     font-size: 24px;
     font-weight: 700;
+  }
+
+  .logo span {
+    font-size: 24px;
   }
 
   .description h3 {
@@ -1042,6 +1050,7 @@ textarea:focus {
 
   .btn button {
     padding: 0.9rem 2rem;
+    margin-bottom: 10px;
     font-size: 12px;
     letter-spacing: 1.5px;
     font-weight: 600;
@@ -1049,6 +1058,15 @@ textarea:focus {
 
   .hero__scrollDown a p {
     font-size: 12px;
+  }
+
+  .go-to-top {
+    padding: 9px;
+  }
+
+  .go-to-top img {
+    height: 16px;
+    width: 16px;
   }
 
   /* ABOUT SECTION */
@@ -1117,7 +1135,8 @@ textarea:focus {
   }
 
   .services_content__text {
-    font-size: 17px;
+    font-size: 14px;
+    padding-inline: 10px;
   }
 
   #works {
@@ -1132,18 +1151,156 @@ textarea:focus {
     letter-spacing: 1.5px;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .works_content h1 {
-    line-height: 2rem;
+    line-height: 1.7rem;
   }
 
   .hr3 {
     margin-top: 15px;
   }
 
-  .images {
-    margin-top: -55vh;
+  #our-clients {
+    margin-top: -5px;
+    padding: 90px 15px;
+    padding-inline: 15px;
+    padding-top: 50px;
   }
+
+  .clients_top p {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+  }
+
+  .clients_top h1 {
+    font-size: 22px;
+  }
+
+  .hr4_hr {
+    height: 1px;
+    width: 200px;
+  }
+
+  .clients__slider {
+    margin-top: -80px;
+  }
+
+  .slider_text {
+    font-size: 16px;
+  }
+
+  .slider-slide .profile {
+    margin-top: 2.5rem;
+  }
+
+  .slider-slide .profile h5 {
+    font-size: 13px;
+    margin-block: 0.1rem;
+  }
+
+  .slider-slide .profile small {
+    font-size: 13px;
+  }
+
+  #contact {
+    padding-inline: 15px;
+  }
+
+  .green_line {
+    height: 140px;
+  }
+
+  .contact__heading p {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+  }
+
+  .contact__heading h1 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contact__form {
+    padding-top: 40px;
+    padding-inline: 0;
+  }
+
+  #contact input::placeholder,
+  textarea::placeholder {
+    font-size: 13px;
+  }
+
+  .form_container .input_box input,
+  .contact__form form textarea {
+    font-size: 13px;
+  }
+
+  .form__btn input {
+    padding: 10px 80px;
+  }
+
+  .contact__details .contact_item {
+    margin-bottom: 2rem;
+  }
+
+  .contact_item h4 {
+    font-size: 16px;
+  }
+
+  .contact_item p {
+    font-size: 13px;
+  }
+
+  #footer {
+    padding: 60px 15px;
+    padding-bottom: 0;
+  }
+
+  .footer__top h1 {
+    font-size: 20px;
+  }
+
+  .footer__top p,
+  .footer__center p {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .footer__center h3 {
+    text-align: center;
+    margin-block: 15px;
+  }
+
+  .footer__form-item input {
+    padding: 10px 50px;
+    margin-block: 15px;
+  }
+
+  .footer__form-item input::placeholder {
+    font-size: 13px;
+  }
+
+  .footer__submit-button input {
+    padding: 10px 110px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .footer__bottom {
+    padding: 50px 15px;
+  }
+
+  .footer__bottom p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  /* 
+  .footer__form {
+    margin-top: 10px;
+  } */
 }

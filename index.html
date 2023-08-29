@@ -17,8 +17,6 @@
                 <div class="line"></div>
             </div>
         </div>
-
-        <div class="scroll-to-top"></div>
     </div>
 
     <a href="#hero">
@@ -139,12 +137,12 @@
                 <p>SEND US A MESSAGE</p>
                 <form action="">
                     <div class="form_container">
-                        <div class="input_box"><input type="text" placeholder="Your Name" class="border-bottom-input"></div>
-                        <div class="input_box"><input type="email" placeholder="Your Email" class="border-bottom-input"></div>
-                        <div class="input_box"><input type="text" placeholder="Subject" class="border-bottom-input"></div>
+                        <div class="input_box"><input type="text" name="name" placeholder="Your Name" class="border-bottom-input"></div>
+                        <div class="input_box"><input type="email" name="email" placeholder="Your Email" class="border-bottom-input"></div>
+                        <div class="input_box"><input type="text" name="subject" placeholder="Subject" class="border-bottom-input"></div>
                         <div class="text_area"><textarea placeholder="Your Message" cols="45" rows="10"></textarea></div>
                         <div class="form__btn">
-                            <input type="submit" value="Submit"></input>
+                            <input type="submit" value="Submit" id="submit1"></input>
                         </div>
                     </div>
                 </form>
@@ -167,10 +165,10 @@
                 <div class="email__subscribe">
                     <form action="" class="footer__form">
                         <div class="footer__form-item">
-                            <input type="text" placeholder="Email">
+                            <input type="text" placeholder="Email" name="text">
                         </div>
                         <div class="footer__submit-button">
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Submit" id="submit">
                         </div>
                     </form>
                 </div>
@@ -180,6 +178,7 @@
             <p>© Copyright Glint 2022<br>Site Template by &nbsp;<span>Colorlib</span></p>
         </div>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>
