@@ -163,7 +163,6 @@ html {
   height: 0;
   width: 15rem;
   z-index: 999;
-  padding: 10px 5px;
 }
 
 .menu.activeMenu {
