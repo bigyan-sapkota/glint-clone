@@ -8,40 +8,40 @@ const clients = document.querySelector(".slider-track");
 const contact = document.querySelector(".contact__details");
 const weAreGlintInAbout = document.querySelector(".about__content h1");
 const scrollToTop = document.querySelector(".go-to-top");
-const menu_links = document.querySelector(".navbar-items li");
-
+const menu_links = document.querySelectorAll(".navbar-items li");
 
 // Making menu_hamburger background black while scrolling:
-window.addEventListener('scroll', () => {
-  if(window.scrollY>menu_hamburger.offsetHeight + 50){
-    menu_hamburger.classList.add('active');
-  }else{
-    menu_hamburger.classList.remove('active');
+window.addEventListener("scroll", () => {
+  if (window.scrollY > menu_hamburger.offsetHeight + 50) {
+    menu_hamburger.classList.add("active");
+  } else {
+    menu_hamburger.classList.remove("active");
   }
 
-  if(window.scrollY>weAreGlintInAbout.offsetHeight + 500){
-    scrollToTop.style.display = 'block';
-  }else if(window.scrollY<weAreGlintInAbout.offsetHeight + 550){
-    scrollToTop.style.display = 'none';
+  if (window.scrollY > weAreGlintInAbout.offsetHeight + 500) {
+    scrollToTop.style.display = "block";
+  } else if (window.scrollY < weAreGlintInAbout.offsetHeight + 550) {
+    scrollToTop.style.display = "none";
   }
-})
+});
 
 // Making menu_hamburger toggle the menu bar
-menu_hamburger.addEventListener('click', () => {
-  menuForMobile.classList.add('activeMenu');
-  menu_hamburger.style.display = 'none';
+menu_hamburger.addEventListener("click", () => {
+  menuForMobile.classList.add("activeMenu");
+  menu_hamburger.style.display = "none";
 });
 
-menu_cross.addEventListener('click', () => {
-  menuForMobile.classList.remove('activeMenu');
-  menu_hamburger.style.display = 'flex';
+menu_cross.addEventListener("click", () => {
+  menuForMobile.classList.remove("activeMenu");
+  menu_hamburger.style.display = "flex";
 });
 
-menu_links.addEventListener('click', () => {
-  menuForMobile.classList.remove('activeMenu');
-  menu_hamburger.style.display = 'flex';
+menu_links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuForMobile.classList.remove("activeMenu");
+    menu_hamburger.style.display = "flex";
+  });
 });
-
 
 const progress = [
   {
@@ -64,92 +64,92 @@ const progress = [
 
 const servicesDetails = [
   {
-    img:"paintbrush.png",
-    title:"Brand Identity", 
-    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+    img: "paintbrush.png",
+    title: "Brand Identity",
+    text: "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"3d.png",
-    title:"Illustration", 
-    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+    img: "3d.png",
+    title: "Illustration",
+    text: "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"megaphone.png",
-    title:"Marketing", 
-    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+    img: "megaphone.png",
+    title: "Marketing",
+    text: "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"planet-earth.png",
-    title:"Web Design", 
-    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+    img: "planet-earth.png",
+    title: "Web Design",
+    text: "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"3d-cube.png",
-    title:"Packaging Design", 
-    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+    img: "3d-cube.png",
+    title: "Packaging Design",
+    text: "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
   {
-    img:"suitcase.png",
-    title:"Web Development", 
-    text:"Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+    img: "suitcase.png",
+    title: "Web Development",
+    text: "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
   },
 ];
 
 const imageDetails = [
   {
     img: "lady-shutterbug.jpg.webp",
-    title:"SHUTTERBUG",
-    tag:"Branding"
+    title: "SHUTTERBUG",
+    tag: "Branding",
   },
   {
     img: "woodcraft.jpg.webp",
-    title:"WOODCRAFT",
-    tag:"Web Design"
+    title: "WOODCRAFT",
+    tag: "Web Design",
   },
   {
     img: "the-beetle.jpg.webp",
-    title:"THE BETTLE",
-    tag:"Web Development"
+    title: "THE BETTLE",
+    tag: "Web Development",
   },
   {
     img: "grow-green.jpg.webp",
-    title:"GROW GREEN",
-    tag:"Branding"
+    title: "GROW GREEN",
+    tag: "Branding",
   },
   {
     img: "guitarist.jpg.webp",
-    title:"GUITARIST",
-    tag:"Web Design"
+    title: "GUITARIST",
+    tag: "Web Design",
   },
   {
     img: "palmeira.jpg.webp",
-    title:"PALMEIRA",
-    tag:"Web Design"
+    title: "PALMEIRA",
+    tag: "Web Design",
   },
 ];
 
 const userReviewOfClients = [
   {
-    img:"user-01.webp",
-    text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium aperiam exercitationem alias earum reprehenderit saepe nobis quo aut, laboriosam suscipit. Vero, dolores. Ipsum dicta aut, voluptas quae doloribus sapiente harum magnam ipsa, vitae laudantium repellendus expedita magni accusamus adipisci at veniam nisi. Odio, et alias quam impedit similique dignissimos?",
-    name:"Tim Cook",
-    position:"CEO, Apple",
+    img: "user-01.webp",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor laudantium aperiam exercitationem alias earum reprehenderit saepe nobis quo aut, laboriosam suscipit. Vero, dolores. Ipsum dicta aut, voluptas quae doloribus sapiente harum magnam ipsa, vitae laudantium repellendus expedita magni accusamus adipisci at veniam nisi. Odio, et alias quam impedit similique dignissimos?",
+    name: "Tim Cook",
+    position: "CEO, Apple",
   },
   {
-    img:"user-02.webp",
-    text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, minus! A adipisci ad autem dolorum incidunt rem dolore. Mollitia expedita magnam saepe omnis voluptatibus dolore culpa quo est ea exercitationem voluptates, perspiciatis sit soluta eveniet autem eos repellat corporis vel!",
-    name:"Sundar Pichai",
-    position:"CEO, Google",
+    img: "user-02.webp",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, minus! A adipisci ad autem dolorum incidunt rem dolore. Mollitia expedita magnam saepe omnis voluptatibus dolore culpa quo est ea exercitationem voluptates, perspiciatis sit soluta eveniet autem eos repellat corporis vel!",
+    name: "Sundar Pichai",
+    position: "CEO, Google",
   },
   {
-    img:"user-03.webp",
-    text:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi ad minima magni sit facilis. Laboriosam asperiores voluptatibus ipsa corrupti quidem ducimus labore, consequuntur soluta sint inventore illum expedita incidunt quia, modi hic atque unde voluptates.",
-    name:"Satya Nadella",
-    position:"CEO Microsoft",
-  }
+    img: "user-03.webp",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi ad minima magni sit facilis. Laboriosam asperiores voluptatibus ipsa corrupti quidem ducimus labore, consequuntur soluta sint inventore illum expedita incidunt quia, modi hic atque unde voluptates.",
+    name: "Satya Nadella",
+    position: "CEO Microsoft",
+  },
 ];
 
-const contactDetails =[
+const contactDetails = [
   {
     heading: "Where to Find Us",
     detail1: "1600 Amphitheatre Parkway",
@@ -184,7 +184,6 @@ const generateHTMLForAbout = () => {
 };
 generateHTMLForAbout();
 
-
 // For services section
 const generateHTMLForService = () => {
   const contentHTMLForService = servicesDetails.map(
@@ -200,15 +199,15 @@ const generateHTMLForService = () => {
       </div>
     `
   );
-  contentServices.innerHTML = contentHTMLForService.join('');
+  contentServices.innerHTML = contentHTMLForService.join("");
 };
 generateHTMLForService();
 
 // For images section
-const generateHTMLForImages = () =>{
-  const contentHTMLForImages = imageDetails.map(
-    (imageItems, index) => 
-    index <= 2 ? `
+const generateHTMLForImages = () => {
+  const contentHTMLForImages = imageDetails.map((imageItems, index) =>
+    index <= 2
+      ? `
     <div class="col1">
       <div class="col-img">
           <div class="images-img"><img src="./assets/${imageItems.img}" alt=""></div>
@@ -222,7 +221,8 @@ const generateHTMLForImages = () =>{
           </div>
       </div>
    </div>
-    `: `
+    `
+      : `
     <div class="col2">
       <div class="col-img">
         <div class="images-img"><img src="./assets/${imageItems.img}" alt=""></div>
@@ -238,11 +238,11 @@ const generateHTMLForImages = () =>{
     </div>
     `
   );
-  images.innerHTML = contentHTMLForImages.join('');
+  images.innerHTML = contentHTMLForImages.join("");
 };
 generateHTMLForImages();
 
-// User review section 
+// User review section
 const generateHTMLForClientsUserReview = () => {
   const contentHTMLForClientsUserReview = userReviewOfClients.map(
     (clients) => `
@@ -256,7 +256,7 @@ const generateHTMLForClientsUserReview = () => {
       </div>
     `
   );
-  clients.innerHTML = contentHTMLForClientsUserReview.join('');
+  clients.innerHTML = contentHTMLForClientsUserReview.join("");
 };
 generateHTMLForClientsUserReview();
 
@@ -264,16 +264,16 @@ generateHTMLForClientsUserReview();
 let currentSlide = 0;
 
 function changeSlide(slideIndex) {
-  const sliderTrack = document.querySelector('.slider-track');
-  const slideWidth = document.querySelector('.slider-slide').offsetWidth;
-  console.log(".slicer-track", sliderTrack, ".slider-slide", slideWidth)
-  
-  const buttons = document.querySelectorAll('.slider-button');
-  buttons.forEach(button => button.classList.remove('active'));
+  const sliderTrack = document.querySelector(".slider-track");
+  const slideWidth = document.querySelector(".slider-slide").offsetWidth;
+  console.log(".slicer-track", sliderTrack, ".slider-slide", slideWidth);
+
+  const buttons = document.querySelectorAll(".slider-button");
+  buttons.forEach((button) => button.classList.remove("active"));
 
   // Add 'active' class to the clicked button
   const clickedButton = buttons[slideIndex];
-  clickedButton.classList.add('active');
+  clickedButton.classList.add("active");
 
   currentSlide = slideIndex;
   const displacement = -slideWidth * currentSlide;
@@ -292,6 +292,6 @@ const generateHTMLForContact = () => {
       </div>
     `
   );
-   contact.innerHTML = contentHTMLForContact.join('');
-}
+  contact.innerHTML = contentHTMLForContact.join("");
+};
 generateHTMLForContact();
