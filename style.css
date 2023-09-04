@@ -246,6 +246,7 @@ html {
   color: white;
   height: 500px;
   margin-top: 2rem;
+  padding-block: 0;
 }
 
 .description h3 {
@@ -272,7 +273,6 @@ html {
 .btn {
   display: flex;
   flex-direction: column;
-  margin-bottom: 200px;
 }
 
 .btn button {
@@ -989,7 +989,6 @@ textarea:focus {
   }
 }
 
-/* 300px devices */
 @media screen and (max-width: 300px) {
   .menu-bar_scroll {
     top: 25px;
@@ -1331,8 +1330,4 @@ textarea:focus {
     font-size: 10px;
     line-height: 15px;
   }
-  /* 
-  .footer__form {
-    margin-top: 10px;
-  } */
 }
